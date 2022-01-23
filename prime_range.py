@@ -10,7 +10,10 @@ def prime_range(start:int, end:int)->list:
     Returns:
         list: list of prime numbers in range
     """
+    s = []
+    k = 0
+    for i in range (start, end):
+        if is_prime(i):
+            s.append(i)
+    return s
  
-    return 
-
-#Test function.
