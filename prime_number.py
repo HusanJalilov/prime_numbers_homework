@@ -9,5 +9,14 @@ def prime_number(n:int)->int:
     Returns:
         int: Number of prime numbers
     """
-
-    return 
+    s = []
+    m = 0
+    for i in range (1, n):
+        for j in range (1, i):
+            if i % j == 0:
+                m += 1
+        if m == 0:
+            s.append(i)
+        else:
+            m = 0
+    return len(s)
