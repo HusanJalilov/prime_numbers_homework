@@ -11,5 +11,13 @@ def prime_number(n:int)->int:
     """
     s = []
     m = 0
-    for x in range(n):
-        
+    for i in range (2, n):
+        for j in range (2, i):
+            if i % j == 0:
+                m += 1
+        if m == 0:
+            s.append(i)
+        else:
+            m = 0
+    return len(s)
+print(prime_number(10))
